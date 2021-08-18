@@ -5,7 +5,7 @@
 apt install default-jre default-jdk
 ```
 
-## Truncar numero con x decimales
+## Functions
 
 ```java
 	double truncateDouble(double number, int numDigits) {
