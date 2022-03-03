@@ -143,6 +143,26 @@ apt install default-jre default-jdk
 
 	}
 	
+	public static String extraerExtension(String nombreArchivo) {
+
+		String extension = "";
+
+		if (nombreArchivo.length() >= 3) {
+
+			extension = nombreArchivo.substring(nombreArchivo.lastIndexOf(".") + 1, nombreArchivo.length());
+
+			extension = extension.toLowerCase();
+
+			if (extension.endsWith(".ts")) {
+				extension = "ts";
+			}
+
+		}
+
+		return extension;
+		
+	}
+	
 	public static LinkedList<String> directorio(String ruta, String extension, boolean filtro, boolean carpeta) {
 
 		LinkedList<String> lista = new LinkedList<String>();
