@@ -1,24 +1,56 @@
 # Java
 
 ## Instalar Java en Linux
-```
+
+~~~java
+
 apt install default-jre default-jdk
-```
+
+~~~
 
 ## Functions
 
-```java
+~~~java
+
+	public static int calcularPorcentaje(int valor, int total) {
+
+		float resultado = (valor * 100) / total;
+
+		int salida;
+
+		NumberFormat numberFormat = NumberFormat.getInstance();
+
+		numberFormat.setMaximumFractionDigits(0);
+
+		numberFormat.setRoundingMode(RoundingMode.DOWN);
+
+		salida = Integer.parseInt(numberFormat.format(resultado));
+
+		return salida;
+
+	}
+
 	double truncateDouble(double number, int numDigits) {
+	
 		double result = number;
+		
 		String arg = "" + number;
+		
 		int idx = arg.indexOf('.');
+		
 		if (idx != -1) {
+		
 			if (arg.length() > idx + numDigits) {
+			
 				arg = arg.substring(0, idx + numDigits + 1);
+				
 				result = Double.parseDouble(arg);
+				
 			}
 		}
+		
 		return result;
+		
 	}
 	
 	double convertirASegundos(String duracionVideo) {
@@ -45,12 +77,17 @@ apt install default-jre default-jdk
 		}
 
 		catch (Exception e) {
+		
 			horas = 0;
+			
 			minutos = 0;
+			
 			segundos = 0;
+			
 		}
 
 		return horas + minutos + segundos;
+		
 	}
 
 	public static String calcularTiempo(long segundos) {
@@ -60,8 +97,11 @@ apt install default-jre default-jdk
 		int horas = 0;
 
 		if (segundos == 60) {
+		
 			minutos = 1;
+			
 			segundos = 0;
+			
 		}
 
 		minutos = (int) (segundos / 60);
@@ -73,17 +113,25 @@ apt install default-jre default-jdk
 		segundos -= calculoSegundos;
 
 		if (minutos == 60) {
+		
 			horas = 1;
+			
 			minutos = 0;
+			
 			segundos = 0;
+			
 		}
 
 		if (minutos > 60) {
 
 			if (minutos % 60 == 0) {
+			
 				horas = minutos / 60;
+				
 				minutos = 0;
+				
 				segundos = 0;
+				
 			}
 
 			else {
@@ -97,7 +145,9 @@ apt install default-jre default-jdk
 				while (contador == 0) {
 
 					if (minutos < horaProxima) {
+					
 						contador = horaProxima;
+						
 					}
 
 					else {
@@ -105,7 +155,9 @@ apt install default-jre default-jdk
 						siguienteHora = horaProxima + 60;
 
 						if (minutos > horaProxima && minutos < siguienteHora) {
+						
 							contador = siguienteHora;
+							
 						}
 
 						horaProxima = siguienteHora;
@@ -128,15 +180,21 @@ apt install default-jre default-jdk
 		String ceroSegundos = "";
 
 		if (horas <= 9) {
+		
 			ceroHoras = "0";
+			
 		}
 
 		if (minutos <= 9) {
+		
 			ceroMinutos = "0";
+			
 		}
 
 		if (segundos <= 9) {
+		
 			ceroSegundos = "0";
+			
 		}
 
 		return ceroHoras + horas + " : " + ceroMinutos + minutos + " : " + ceroSegundos + segundos;
@@ -154,7 +212,9 @@ apt install default-jre default-jdk
 			extension = extension.toLowerCase();
 
 			if (extension.endsWith(".ts")) {
+			
 				extension = "ts";
+				
 			}
 
 		}
@@ -220,7 +280,9 @@ apt install default-jre default-jdk
 					else {
 
 						if (carpeta) {
+						
 							lista.add(ruta + fichero);
+							
 						}
 
 						else {
@@ -228,7 +290,9 @@ apt install default-jre default-jdk
 							if (folder.isDirectory()) {
 
 								if (!fichero.isEmpty()) {
+								
 									lista.add(fichero);
+									
 								}
 
 							}
@@ -252,4 +316,4 @@ apt install default-jre default-jdk
 
 	}
 	
-```
+~~~
