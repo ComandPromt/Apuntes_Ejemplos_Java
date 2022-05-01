@@ -12,6 +12,24 @@ apt install default-jre default-jdk
 
 ~~~java
 
+	public static String aumentarDia(int valor) {
+
+		Calendar calendar = Calendar.getInstance();
+	
+		calendar.setTime(new Date());
+
+		int calendarTime = Calendar.DAY_OF_MONTH;
+
+		int temp = calendar.get(calendarTime);
+
+		calendar.set(calendarTime, temp + valor);
+
+		Date newDate = calendar.getTime();
+
+		return newDate.toString();
+
+	}
+
 	public static int calcularPorcentaje(int valor, int total) {
 
 		float resultado = (valor * 100) / total;
