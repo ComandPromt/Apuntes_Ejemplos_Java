@@ -335,3 +335,96 @@ apt install default-jre default-jdk
 	}
 	
 ~~~
+
+#Pojo
+
+~~~java
+
+package ComboFonts;
+
+import java.awt.Dimension;
+
+import java.awt.event.ActionEvent;
+
+import java.io.IOException;
+
+import javax.swing.GroupLayout;
+
+import javax.swing.GroupLayout.Alignment;
+
+import javax.swing.JButton;
+
+import javax.swing.JFrame;
+
+import javax.swing.event.ChangeEvent;
+
+@SuppressWarnings("all")
+
+public class Main extends javax.swing.JFrame {
+
+	public Main() throws IOException {
+
+		setAlwaysOnTop(true);
+
+		setTitle("Test");
+
+		setType(Type.NORMAL);
+
+		initComponents();
+
+		this.setVisible(true);
+
+	}
+
+	public static void main(String[] args) {
+
+		try {
+			new Main().setVisible(true);
+			
+		}
+		
+		catch (Exception e) {
+
+		}
+		
+	}
+
+	public void initComponents() throws IOException {
+
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
+		setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+		setResizable(false);
+
+		javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+		
+		layout.setHorizontalGroup(
+			layout.createParallelGroup(Alignment.LEADING)
+				.addGap(0, 526, Short.MAX_VALUE)
+		);
+		
+		layout.setVerticalGroup(
+			layout.createParallelGroup(Alignment.LEADING)
+				.addGap(0, 404, Short.MAX_VALUE)
+		);
+
+		getContentPane().setLayout(layout);
+
+		setSize(new Dimension(532, 433));
+
+		setLocationRelativeTo(null);
+
+	}
+
+	public void actionPerformed(ActionEvent arg0) {
+
+	}
+
+	public void stateChanged(ChangeEvent e) {
+
+	}
+
+}
+
+~~~
