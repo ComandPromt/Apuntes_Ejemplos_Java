@@ -340,8 +340,6 @@ apt install default-jre default-jdk
 
 ~~~java
 
-package ComboFonts;
-
 import java.awt.Dimension;
 
 import java.awt.event.ActionEvent;
