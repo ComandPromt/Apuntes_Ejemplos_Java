@@ -8,6 +8,41 @@ apt install default-jre default-jdk
 
 ~~~
 
+## Cron Schedule
+
+~~~java
+
+Main.java
+
+public class Main{
+   public static void main(String[] args){
+
+     Timer t = new Timer();
+     MyTask mTask = new MyTask();
+     // This task is scheduled to run every 10 seconds
+
+     t.scheduleAtFixedRate(mTask, 0, 10000);
+   }
+
+}
+
+MyTask.java
+
+class MyTask extends TimerTask{
+
+   public MyTask(){
+     //Some stuffs
+   }
+
+   @Override
+   public void run() {
+     System.out.println("Hi see you after 10 seconds");
+   }
+
+}
+
+~~~
+
 ## Functions
 
 ~~~java
