@@ -406,8 +406,6 @@ public class Main extends javax.swing.JFrame {
 
 	public Main() throws IOException {
 
-		setAlwaysOnTop(true);
-
 		setTitle("Test");
 
 		setType(Type.NORMAL);
