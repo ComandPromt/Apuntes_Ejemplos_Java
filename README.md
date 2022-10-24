@@ -1,5 +1,11 @@
 # Java
 
+[Read JSON](https://github.com/ComandPromt/Consumo-de-archivo-json)
+
+[Preview](https://github.com/ComandPromt/Combinacion-Numerica/raw/master/preview.png)
+
+[Combinatoria](https://github.com/ComandPromt/Combinacion-Numerica)
+
 ## Instalar Java en Linux
 
 ~~~java
