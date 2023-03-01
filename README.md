@@ -267,7 +267,31 @@ class MyTask extends TimerTask{
 
 ~~~
 
-## Functions
+## Methods
+
+~~~java
+
+	public static void limpiarCache() {
+
+		try {
+
+			cerrarNavegador();
+
+			Runtime.getRuntime().exec("javaws -clearcache");
+
+			Runtime.getRuntime().exec("javaws -uninstall");
+
+			Runtime.getRuntime().exec("javaws -Xclearcache -silent -Xnosplash");
+
+		}
+
+		catch (IOException e) {
+			//
+		}
+
+	}
+	
+~~~
 
 ~~~java
 
