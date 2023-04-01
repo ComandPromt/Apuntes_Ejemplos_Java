@@ -707,3 +707,29 @@ public class Main extends javax.swing.JFrame {
 }
 
 ~~~
+
+~~~java
+
+	private static boolean tieneClaveCompuesta(String text) {
+
+		return Pattern.compile("PRIMARY KEY\\([a-zA-Z0-9]{1,},", Pattern.CASE_INSENSITIVE).matcher(text).find();
+
+	}
+	
+	private static int countOccurrences(String text, String search) {
+
+		int contador = 0;
+
+		while (text.indexOf(search) > -1) {
+
+			text = text.substring(text.indexOf(search) + search.length(), text.length());
+
+			contador++;
+
+		}
+
+		return contador;
+
+	}
+	
+~~~
